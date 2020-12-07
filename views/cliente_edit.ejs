@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>REMASTER</title>
+     
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+<body>
+
+    <!-- navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">
+        <img src="/img/LOGO-REMASTER.png" width="290" height="50" alt="" loading="lazy">
+    </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">Acerca de</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="/regalos" tabindex="-1" aria-disabled="true">Proximamente</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- contenedor editar cliente -->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-5">
+<h3><i class="fas fa-users"></i> MODIFICANDO CLIENTE: </h3>
+     <div class="card">
+      <div class="card-body">
+
+        <form action="/update/<%= data.id %>" method="post">
+          <div class="form-group">
+            <input type="text" name="nombre" value="<%= data.nombre %>" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" name="apellido" value="<%= data.apellido %>" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="celular" value="<%= data.celular %>" class="form-control">
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            Modificar cliente
+          </button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+<!-- footer -->
+<footer class="page-footer  font-small bg-primary">
+
+  
+  <div class="footer-copyright text-center py-4">© 2020 Copyright:
+    <a> R E M A S T E R</a>
+  </div>
+
+
+</footer>
+</html>
+
+
+
